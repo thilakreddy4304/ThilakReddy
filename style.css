@@ -176,13 +176,27 @@ section {
   height: 80vh;
 }
 
-.back-video{
+/* .back-video{
   position: fixed;
   right: 0;
   bottom: 0;
   left: 0;
   z-index: -1;
+} */
+
+.back-video {
+  position: fixed; /* changed from absolute to fixed */
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  transform: translateX(-50%) translateY(-50%);
+  object-fit: cover; /* ensures video covers the viewport */
 }
+
 .section__pic-container {
   display:flex;
   height: 400px;
